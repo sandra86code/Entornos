@@ -1,0 +1,33 @@
+package com.test.refactoring.business;
+
+public class Camion extends Vehiculo {
+
+	String tipoCarnet;
+	public Camion() {
+		super();
+	}
+	
+	public Camion(String matricula, String color, String combustible, String tipoCarnet, String nombre_conductor, String dniConductor) {
+		super();
+		this.matricula = matricula;
+		this.color = color;
+		this.combustible = combustible;
+		this.tipoCarnet = tipoCarnet;
+		this.nombre_conductor = nombre_conductor;
+		this.dniConductor = dniConductor;
+	}
+
+	@Override
+	public void Acelerar(Integer velocidad) {
+		System.out.println("La aceleración del camión se realizará progresivamente para conservar sus neumáticos");
+		
+		//TO DO
+		//Incluir lógica de movimiento
+	}
+	
+	@Override
+	public void Detener() {
+		System.out.println("CUIDADO!! La detención de un vehículo de gran tamaño puede ocasionar accidentes de tráfico");
+	}
+	
+}

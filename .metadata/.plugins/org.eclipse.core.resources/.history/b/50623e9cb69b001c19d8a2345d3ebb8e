@@ -1,0 +1,79 @@
+package com.test.refactoring.business;
+
+public abstract class Vehiculo {
+
+	protected String matricula;
+	protected String color;
+	protected String combustible;
+	protected String nombreConductor;
+	protected String dniConductor;
+	
+	
+	
+
+	public Vehiculo(String matricula, String color, String combustible, String nombreConductor, String dniConductor) {
+		super();
+		this.matricula = matricula;
+		this.color = color;
+		this.combustible = combustible;
+		this.nombreConductor = nombreConductor;
+		this.dniConductor = dniConductor;
+	}
+
+	protected String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	protected String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	protected String getCombustible() {
+		return combustible;
+	}
+
+	public void setCombustible(String combustible) {
+		this.combustible = combustible;
+	}
+
+	protected String getNombre_conductor() {
+		return nombre_conductor;
+	}
+
+	public void setNombre_conductor(String nombre_conductor) {
+		this.nombre_conductor = nombre_conductor;
+	}
+
+	protected String getDniConductor() {
+		return dniConductor;
+	}
+
+	public void setDniConductor(String dniConductor) {
+		this.dniConductor = dniConductor;
+	}
+	
+	protected abstract void detener();
+
+	
+	protected abstract void acelerar(Integer velocidad);
+
+	
+	@Override
+	public String toString() {
+		return "Vehiculo [matricula=" + matricula + ", color=" + color + ", combustible=" + combustible
+				+ ", nombre_conductor=" + nombre_conductor + ", dniConductor=" + dniConductor + "]";
+	}
+
+	
+	
+	
+
+}

@@ -1,0 +1,5 @@
+1646394117470	Rename package 'com.test.refactoring.Business'
+1646394856721	Extract superclass 'Vehiculo'
+1646398991910	Extract constant 'IVA'
+1646399022876	Extract constant 'PRECIO_ALQUILER_DIA'
+1646399045641	Extract constant 'PRECIO_RENTING_MES'

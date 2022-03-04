@@ -1,0 +1,89 @@
+package com.test.refactoring.main;
+
+import java.util.Scanner;
+
+import com.test.refactoring.business.Camion;
+import com.test.refactoring.business.Coche;
+import com.test.refactoring.business.Vehiculo;
+import com.test.refactoring.utils.Utils;
+
+public class MenuApp {
+	
+	static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		
+		mostrarPresentacion();
+		
+		mensajeUsuario();
+		
+
+		int numCoches= leerEntero("Introduce el número de coches : ");
+		Coche[] listaCoches = new Coche[numCoches];
+		for (int i=0; i<numCoches; i++) {
+			listaCoches[i] = new Coche("DKIJY", "rojo", "diesel", "Jorge", "17865583G", 4);
+			listaCoches[i].acelerar(80);
+		}
+		
+		int numCamiones= leerEntero("Introduce el número de camiones : ");
+		Camion[] listaCamiones = new Camion[numCamiones];
+		for (int i=0; i<numCamiones; i++) {
+			listaCamiones[i] = new Camion("DKd35IJY", "verde", "gasolina", "Pepe", "17865863G", "B23");
+			listaCamiones[i].acelerar(20);
+		}
+		
+		detenerCoches(listaCoches);
+		detenerCamiones(listaCamiones);
+		
+		sc.close();
+		
+	}
+	
+
+	
+	private static void mostrarPresentacion () {
+		System.out.println("/*******************************************************************************/"
+						+"/***                                                                         ***/"
+						+"/***     VAMOS A REFACTORIZAR...HAY QUE ELIMINAR LOS MALOR OLORES YA!!       ***/"
+						+"/***                                                                         ***/"
+						+"/*******************************************************************************/");
+	}
+	
+	private static void mensajeUsuario() {
+		String nombre = leerCadena("Introduce tu nombre: ");
+		String primerApellido = leerCadena("Introduce tu nombre: ");
+
+		System.out.println("/*******************************************************************************/"
+				+"/***                                                                         ***/"
+				+ "/*** BIENVENIDO/A " + nombre + " " + primerApellido
+				+ "/*** " + Utils.fecha_actual() 
+				+ "/*** " + Utils.hora_actual() 
+				+"/***                                                                         ***/"
+				+"/*******************************************************************************/");
+	}
+
+	private static void detenerCoches(Coche[] listaCoches) {
+		for (int i=0; i<listaCoches.length; i++) {
+			System.out.println(listaCoches[i].detener());
+		}
+	}
+
+	private static void detenerCamiones(Camion[] listaCamiones) {
+		for (int i=0; i<listaCamiones.length; i++) {
+			System.out.println(listaCamiones[i].detener());
+		}
+	}
+
+
+	public static String leerCadena(String texto) {
+		System.out.println(texto);
+		return sc.nextLine();
+	}
+
+	public static int leerEntero(String texto) {
+		System.out.println(texto);
+		return Integer.parseInt(sc.nextLine());
+	}
+
+}

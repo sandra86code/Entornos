@@ -1,0 +1,39 @@
+package com.test.refactoring.business;
+
+public class Motocicleta extends Vehiculo {
+	
+	
+	private Integer cilindrada;
+	
+	
+	public Motocicleta(String matricula, String color, String combustible, String nombreConductor,
+			String dniConductor, Integer cilindrada) {
+		super(matricula, color, combustible, nombreConductor, dniConductor);
+		this.cilindrada = cilindrada;
+	}
+
+	public Integer getCilindrada() {
+		return cilindrada;
+	}
+
+	public void setCilindrada(Integer cilindrada) {
+		this.cilindrada = cilindrada;
+	}
+
+	
+	public void acelerar(Integer velocidad) {
+		//TO DO
+	}
+	
+	public void detener() {
+		//TO DO
+	}
+
+	@Override
+	public String toString() {
+		return "motocicleta [matricula=" + matricula + ", color=" + color + ", combustible=" + combustible
+				+ ", cilindrada=" + cilindrada + ", nombre_conductor=" + nombre_conductor + ", dniConductor="
+				+ dniConductor + "]";
+	}	
+
+}

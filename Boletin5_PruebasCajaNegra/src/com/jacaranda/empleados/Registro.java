@@ -65,7 +65,7 @@ public class Registro {
 
 
 	private void setDirectivo(char directivo) throws RegistroException {
-		if(directivo!='+' || directivo!='-') {
+		if(directivo!='+' && directivo!='-') {
 			throw new RegistroException("Los valores permitidos son + si es directivo y - si no lo es.");
 		}
 		this.directivo = directivo;
@@ -88,5 +88,14 @@ public class Registro {
 		}
 		return resultado;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Registro [numEmpleado=" + numEmpleado + ", nombreEmpleado=" + nombreEmpleado + ", mesesTrabajados="
+				+ mesesTrabajados + ", directivo=" + directivo + "]";
+	}
+	
+	
 	
 }

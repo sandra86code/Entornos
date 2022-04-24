@@ -62,7 +62,7 @@ public class ED1T6P {
 		int aux;
 		for (int i = 0; i < array.length - 1; i++) {      	// tomamos como menor el primero                       	// y guardamos su posición
 			for (int j = i + 1; j < array.length; j++){ 	// buscamos en el resto
-				if (array[j] < array[j]) {           		// del array algún elemento
+				if (array[j] < array[i]) {           		// del array algún elemento
 					aux = array[i];
 					array[i] = array[j];
 					array[j] = aux;

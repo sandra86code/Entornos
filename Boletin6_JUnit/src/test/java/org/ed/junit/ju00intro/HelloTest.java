@@ -5,17 +5,18 @@ import org.junit.Test;
 
 public class HelloTest {
 
+	/**
+	 * Ejemplo de test b·sico con JUnit. 
+	 * Define el objeto a probar (target), el resultado esperado (expected) y obtiene el valor de la ejecuciÛn (actual).
+	 * Comprueba la igualdad con assertEquals
+	 */
 	@Test
 	public void testSayHello() {
-		Hello target = new Hello(); //pruebo objeto target, que es mi objetivo
-		String expected = "hello";	//expected: lo que espero
-		String actual = target.sayHello();	//actual, es el resultado
+		Hello target = new Hello();
+		String expected = "hello2";
+		String actual = target.sayHello();
 		
-		assertEquals("Returns hello",expected, actual); //assertEquals, lo usamos para comparar dos objetos y que sean iguales
+		assertEquals("Returns hello",expected, actual);
 	}
-	
-	
-	//Error: error de ejecuci√≥n, por lo que el test no ha terminado. por null pointer exception, por ejemplo
-	//Failure: prueba no exitosa, pero ha terminado su ejecuci√≥n.
 
 }

@@ -8,18 +8,11 @@ import junit.framework.TestSuite;
 
 import org.junit.Test;
 
-
-/**
-* ValidatorText
-* Testing class for Validator
-* Shows how to perform a test repeatedly
-* These comes in handy when we need to test some method
-* more than once or when we want to check performance
-* TODO: check @Repeat annotation option
-*/
-
 public class ValidatorTest extends TestCase {
 	
+	/**
+	 * Constructor necesario para ejecutar los casos de prueba desde el TestSuite
+	 */
 	public ValidatorTest(String testMethodName) {
 		super(testMethodName);
 	}
@@ -55,18 +48,18 @@ public class ValidatorTest extends TestCase {
 	}
 
 	
+	/**
+	 * TestSuite permite crear ejecuciones de pruebas más complejas. En este caso se definen pruebas para los 3 casos anteriores,
+	 * lanzando N ejecuciones de cada uno de ellos. El número de ejecuciones se indica creando un RepeatedTest e indicando el número de 
+	 * ejecuciones
+	 */
 	@Test
 	public static TestSuite suite( ) {
-		// Podriamos hacer simplemente esto:
-		// RepeatedTest (el_test, nï¿½mero_de_veces)
-		//return new RepeatedTest(new TestSuite(TestValidador.class),5);
-		
-		// Pero vamos a usar TestSuite
 		TestSuite mySuite = new ActiveTestSuite( );
 		
-		mySuite.addTest(new RepeatedTest(new ValidatorTest("testIsNumber"),50));
-		mySuite.addTest(new RepeatedTest(new ValidatorTest("testIsText"),10));
-		mySuite.addTest(new RepeatedTest(new ValidatorTest("testIsSomethingElse"),10));
+		mySuite.addTest(new RepeatedTest(new ValidatorTest("testIsNumber"),500));
+		mySuite.addTest(new RepeatedTest(new ValidatorTest("testIsText"),100));
+		mySuite.addTest(new RepeatedTest(new ValidatorTest("testIsSomethingElse"),100));
 		
 		return mySuite;
 	}

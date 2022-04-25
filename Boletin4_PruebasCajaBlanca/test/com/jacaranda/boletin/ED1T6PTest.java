@@ -16,7 +16,6 @@ class ED1T6PTest {
 		} catch (Exception e) {
 			System.out.println("Excepción por array vacío (nulo) tal y como se esperaba: " + e.getMessage());
 		}
-
 	}
 
 	

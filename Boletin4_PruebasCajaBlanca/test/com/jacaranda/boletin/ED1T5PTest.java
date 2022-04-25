@@ -9,19 +9,21 @@ class ED1T5PTest {
 	public void numMayorATest() {
 		int actual = ED1T5P.numMayor(3, 2, 1);
 		int expected = 3;
-		assertEquals("Numéro mayor: ", expected, actual);
-	}
-
-	public void numMayorBTest() {
-		int actual = ED1T5P.numMayor(1, 2, 3);
-		int expected = 3;
-		assertEquals("Numéro mayor: ", expected, actual);
+		assertEquals("Número mayor: ", expected, actual);
 	}
 	
+	@Test
 	public void numMayorCTest() {
+		int actual = ED1T5P.numMayor(1, 2, 3);
+		int expected = 3;
+		assertEquals("Número mayor: ", expected, actual);
+	}
+	
+	@Test
+	public void numMayorBTest() {
 		int actual = ED1T5P.numMayor(2, 3, 1);
 		int expected = 3;
-		assertEquals("Numéro mayor: ", expected, actual);
+		assertEquals("Número mayor: ", expected, actual);
 	}
 
 }
